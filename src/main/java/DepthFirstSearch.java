@@ -36,15 +36,15 @@ public class DepthFirstSearch {
                 {1,6}
         };
 
-        Integer[] path_graph_1 = depthFirstSearch(graph1);
-        Integer[] path_graph_2 = depthFirstSearch(graph2);
+        int[] path_graph_1 = depthFirstSearch(graph1);
+        int[] path_graph_2 = depthFirstSearch(graph2);
 
         printPath(path_graph_1);
         printPath(path_graph_2);
 
     }
 
-    public static Integer[] depthFirstSearch(int[][] graph) {
+    public static int[] depthFirstSearch(int[][] graph) {
 
         // Create a stack.
         Stack<Integer> stack = new Stack<>();
@@ -53,7 +53,7 @@ public class DepthFirstSearch {
         ArrayList<Integer> visited = new ArrayList<>();
 
         // Create an array called path. This will keep track of the order of nodes that we visit.
-        Integer[] path = new Integer[graph.length];
+        int[] path = new int[graph.length];
 
         // Push our starting node to the stack. We can begin our traversal from any valid node. Let's begin our traversal at node 0.
         /** node 0 means index 0 or row 0 in 2d array graph*/
@@ -94,7 +94,7 @@ public class DepthFirstSearch {
     }
 
     // A private helper method that prints the path. Used for visualisation and debugging purposes.
-    private static void printPath(Integer[] path) {
+    private static void printPath(int[] path) {
 
         for (int node: path) System.out.print(node + " ");
         System.out.println();
